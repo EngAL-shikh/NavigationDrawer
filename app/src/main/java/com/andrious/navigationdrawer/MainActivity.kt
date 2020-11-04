@@ -23,11 +23,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
         drawerLayout = findViewById(R.id.drawer_layout)
         navView = findViewById(R.id.nav_view)
+
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         )
 
 
-
+         toggle.isDrawerIndicatorEnabled=true
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         navView.setNavigationItemSelectedListener(this)
